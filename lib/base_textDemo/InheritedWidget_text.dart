@@ -45,10 +45,10 @@ class __TestwidgetState extends State<_Testwidget> {
   Widget build(BuildContext context) {
 
     //使用InheritedWidget中的共享数据
-//    var _inheritedStr = ShareDataWidget.of(context).data.toString();
+    var _inheritedStr = ShareDataWidget.of(context).data.toString();
     return Container(
       color: Colors.white,
-      child: Text("text",style: TextStyle(fontSize: 40),),
+      child: Text(_inheritedStr,style: TextStyle(fontSize: 40),),
     );
   }
 

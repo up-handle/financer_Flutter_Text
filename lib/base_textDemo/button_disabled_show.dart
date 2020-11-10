@@ -39,7 +39,6 @@ class _ButtonDisableShowPageState extends State<ButtonDisableShowPage> {
   }
 
   List<Widget> _buildButtons(){
-
     List<Widget> list = [
       _buildButton1(_counter),
       _buildSpaceView(20.0),

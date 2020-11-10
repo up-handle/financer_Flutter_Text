@@ -78,8 +78,7 @@ class _ButtonStateShowDemoState extends State<ButtonStateShowDemo> {
                       containedInkWell: true,
 
                       onTap: () {
-                        print(
-                            'click');
+                        print('click');
                       },
                       child: new Container(
                         //不能在InkResponse的child容器内部设置装饰器颜色，否则会遮盖住水波纹颜色的，containedInkWell设置为false就能看到是否是遮盖了。

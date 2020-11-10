@@ -22,6 +22,10 @@ import 'cycle_banner_flie/carousel_page.dart';
 import 'base_textDemo/plus_webView.dart';
 import 'base_textDemo/InheritedWidget_text.dart';
 import 'base_textDemo/provider_text.dart';
+import 'base_textDemo/DropButtonShow.dart';
+import 'base_textDemo/linkageView_widget.dart';
+
+
 
 /**
  * 想要自动错误填充  option + shit + 回车
@@ -112,6 +116,10 @@ final List<_RouterInfo> list = <_RouterInfo> [
   _RouterInfo(name: "button禁用和点击处理",builder: (context) => ButtonDisableShowPage()),
   _RouterInfo(name: "封装轮播图实现",builder: (context) => CarouselPage()),
   _RouterInfo(name: "加载webView的实现",builder: (context) => LoadWebViewPage()),
+  _RouterInfo(name: "弹出Pop的button",builder: (context)=>MyStatefulWidget()),
+  _RouterInfo(name: "View联动分类展示",builder: (context)=>LinkageViewWidget()),
+
+
 
 ];
 
