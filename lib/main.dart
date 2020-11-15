@@ -25,7 +25,7 @@ import 'base_textDemo/provider_text.dart';
 import 'base_textDemo/DropButtonShow.dart';
 import 'base_textDemo/linkageView_widget.dart';
 
-
+import 'flutterTextPack/study_text1.dart';
 
 /**
  * 想要自动错误填充  option + shit + 回车
@@ -55,7 +55,9 @@ class MyApp extends StatelessWidget {
       title:'flutter Demo',
       debugShowCheckedModeBanner:false,
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
+        brightness: Brightness.dark, //应用程序整体主题亮度。由按钮widget使用，确定在不使用主题色的时间选择颜色
+        accentColor: Colors.cyan, //前景色(文本 按钮)
       ),
         //基础练习
         home: ShowAllControllerList(),
@@ -79,7 +81,10 @@ class ShowAllControllerList extends StatelessWidget {
           return Container(
             child:  ListTile(
               title: Text(list[position].name),
-              onTap: (){Navigator.push(context, MaterialPageRoute(builder: list[position].builder));
+              onTap: (){
+                if(list[position].name != ""){
+                  Navigator.push(context, MaterialPageRoute(builder: list[position].builder));
+                }
               },),
             decoration: BoxDecoration(
               border: Border(bottom: BorderSide(width: 1,color: Color(0xffe5e5e5))),
@@ -100,6 +105,8 @@ class _RouterInfo {
 
 final List<_RouterInfo> list = <_RouterInfo> [
 
+  _RouterInfo(name: "flutterStudyText1",builder: (context)=>StudyFlutterText1()),
+  _RouterInfo(name: "",builder: (context)=>Container()),
   _RouterInfo(name: "跨组件状态共享Provider",builder: (context) => InheritedWidgetTestRoute()),
   _RouterInfo(name: "InheritedWidget的测试",builder: (context) => InheritedWidgetTestRoute()),
   _RouterInfo(name: "加载webView的willPopScope",builder: (context) => LoadWebViewPage()),
